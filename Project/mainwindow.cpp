@@ -58,7 +58,7 @@ void MainWindow::on_saveButton_clicked()
         double step=2.0/1000;
         for(int i=0;i<1000;i++){
             double y=processor->calculate_result(step*i);
-            out<<step*i<<","<<y<<"\n";
+            out<<QString::number(step*i,'f',5)<<","<<QString::number(y,'f',5)<<"\n";
         }
     }
 }
